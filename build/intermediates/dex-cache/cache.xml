@@ -2,157 +2,139 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_e447a6140063c5f0c47b6d15d2242f01081a0d99/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_eb0266a90794feea3216c0f2a19750177c592ad5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_62e7ea257cc8208e03930b68269faf2f9f8c5016/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_3c256461b83c384cd5610574c339ccaf68f13b2b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_d3b23b7aa6dd9c0cf3050526b38fea719f902260/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_2e5b43dd77eeba2f4fd5f437d75041809f927ad5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e3df9c51cbf67e763bcf0f3cb8f29dcfb6962f20">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_087424e2af6b688c8d1af553229ff9777b3fcbc0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_e54e7de0fb35c4c3a56bf9532e96664b4c9202f6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_309f8dd457bd1ddebd5a1f0110e4a5b57947654e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_444d729a21361986f342dfc67727a4be71f50085/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_98b2bea57fb320a0b952a51aae357afb4e0cdab5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_2050df9519020ab6e9c26ee10ecdbbfbe68e9d80/classes.dex" />
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_d55c3070e4e0f7c289806e8981b99be4a5ed1278.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_6cd1ac51b8147a444a0b8f663cd91972e1646550.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_0ec21c748fbf302cd96bbc6e6dc2fa8ca11838bb/classes.dex" />
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_c762ccd00e4bfb1517de3ef332b5f4f8d5d6c893.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_1ca94b388cb1da8cd5dc6b8a61fd1490b6e5dc00/classes.dex" />
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_050af25f5d1fce5e06c7346b9cbe7ce3c543aa21.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_1793dda1915a7bf6b60204d8f678af6528106844.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_6668498abc57cd4636cf35422ac11395c43d6360/classes.dex" />
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_6a3b96f4d4c6613661c9e55d4663d5ffb2848c47.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_e4c54ce7e0579ed85fcf5dbdd8f81e1a58b4c0bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_ba537ad02fd6b68e9467a95e6b3d6c3eaff756c1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/SACC/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_11ebd6b72b366d176602ebd3bb7fa98d4bcd196c/classes.dex" />
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_294bfb66317596ee9119ef54dc824175b69ae0f8.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="8be73f730d7e9fe257c9c20cdbb62a81a62c8dbe">
-        <dex dex="/Users/meltemyildirim/Desktop/AC/CalculatorAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_07e366237d5f4f275d0b579332930ec1ca16d3d8/classes.dex" />
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_4c4717de1bf2e4d032299b9b2741df79c7c62c9c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_6f70627d611bdb2ff3761f54af76caf41fae4675.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_c9a5abf21f47562d264f3ebde2f6c550743ee608.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_1c359213145296935c59e66e1121a92c5077bff2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_ab57f76023c21f19b34dd76d6f29155d0b48ab0d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/SACC/Desktop/accesscode/CalculatorPotraitLayout/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_37d72872244f2d306187037df6ba92c05a914281.jar" />
     </item>
 
 </items>
