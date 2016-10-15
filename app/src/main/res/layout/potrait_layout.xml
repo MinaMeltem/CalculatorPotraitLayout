@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/linear_main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/text_result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@android:color/background_light"
-        android:layout_weight="2"/>
+        android:layout_weight="2"
+        android:paddingRight="15dp"
+        android:textSize="60sp"
+        android:gravity="center|end"
+        android:background="@android:color/background_light" />
 
     <LinearLayout
-        android:orientation="horizontal"
         android:id="@+id/lower_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:background="@color/colorPrimary">
+        android:layout_weight="4"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/LL_Rightcontainer"
-            android:orientation="horizontal"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="75">
+            android:layout_weight="75"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/first_column"
-                android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="25">
+                android:layout_weight="25"
+                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/but_7"
@@ -44,8 +45,9 @@
                     android:background="#424242"
                     android:text="7"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_4"
                     android:layout_width="match_parent"
@@ -54,8 +56,9 @@
                     android:background="#424242"
                     android:text="4"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_1"
                     android:layout_width="match_parent"
@@ -64,8 +67,9 @@
                     android:background="#424242"
                     android:text="1"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_dot"
                     android:layout_width="match_parent"
@@ -74,16 +78,17 @@
                     android:background="#424242"
                     android:text="."
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="40sp"/>
+                    android:textSize="40sp"
+                    android:textStyle="italic" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/second_column"
-                android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="25">
+                android:layout_weight="25"
+                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/but_8"
@@ -93,8 +98,9 @@
                     android:background="#424242"
                     android:text="8"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_5"
                     android:layout_width="match_parent"
@@ -103,8 +109,9 @@
                     android:background="#424242"
                     android:text="5"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_2"
                     android:layout_width="match_parent"
@@ -113,8 +120,9 @@
                     android:background="#424242"
                     android:text="2"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_0"
                     android:layout_width="match_parent"
@@ -123,16 +131,17 @@
                     android:background="#424242"
                     android:text="0"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/third_column"
-                android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="25">
+                android:layout_weight="25"
+                android:orientation="vertical">
 
 
                 <Button
@@ -143,8 +152,9 @@
                     android:background="#424242"
                     android:text="9"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_6"
                     android:layout_width="match_parent"
@@ -153,8 +163,9 @@
                     android:background="#424242"
                     android:text="6"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_3"
                     android:layout_width="match_parent"
@@ -163,8 +174,9 @@
                     android:background="#424242"
                     android:text="3"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_equal"
                     android:layout_width="match_parent"
@@ -173,16 +185,17 @@
                     android:background="#424242"
                     android:text="="
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/forth_column"
-                android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="25">
+                android:layout_weight="25"
+                android:orientation="vertical">
 
                 <Button
                     android:id="@+id/but_del"
@@ -190,10 +203,11 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:background="#616161"
-                    android:text="Del"
+                    android:text="AC"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_div"
                     android:layout_width="match_parent"
@@ -202,8 +216,9 @@
                     android:background="#616161"
                     android:text="/"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_multi"
                     android:layout_width="match_parent"
@@ -212,8 +227,9 @@
                     android:background="#616161"
                     android:text="x"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_subt"
                     android:layout_width="match_parent"
@@ -222,8 +238,9 @@
                     android:background="#616161"
                     android:text="-"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="25sp"/>
+                    android:textSize="25sp"
+                    android:textStyle="italic" />
+
                 <Button
                     android:id="@+id/but_add"
                     android:layout_width="match_parent"
@@ -232,8 +249,8 @@
                     android:background="#616161"
                     android:text="+"
                     android:textColor="#ffff"
-                    android:textStyle="italic"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
 
             </LinearLayout>
 
@@ -242,16 +259,14 @@
 
         <LinearLayout
             android:id="@+id/LL_leftline"
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
-            >
+            android:orientation="vertical">
 
         </LinearLayout>
 
     </LinearLayout>
-    
 
 
 </LinearLayout>
