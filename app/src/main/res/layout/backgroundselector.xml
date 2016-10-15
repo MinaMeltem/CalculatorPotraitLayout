@@ -143,4 +143,14 @@
 
     </LinearLayout>
 
+    <Button
+        android:text="Original Layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:onClick="onClick"
+        android:layout_below="@+id/sixth_row"
+        android:layout_marginTop="14dp"
+        android:id="@+id/origin_btn"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
