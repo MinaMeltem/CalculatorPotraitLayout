@@ -6,12 +6,14 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/text_result2"
+        android:id="@id/text_result"
         android:layout_width="match_parent"
         android:layout_height="90sp"
-        android:hint="Do Your Pre-Work!"
-        android:textSize="55sp"
-        android:gravity="bottom|right"/>
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textSize="44sp"
+        android:gravity="end"/>
+
     <LinearLayout
         android:id="@+id/lower_container_land"
         android:orientation="vertical"
@@ -28,7 +30,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/but_rad_land"
+                android:id="@+id/but_rad"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -38,7 +40,7 @@
                 android:layout_weight="1"/>
 
             <Button
-                android:id="@+id/but_deg_land"
+                android:id="@+id/but_deg"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -48,21 +50,21 @@
                 android:layout_weight="1"/>
 
             <!--<Switch-->
-                <!--android:id="@+id/but_raddeg_land"-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:paddingLeft="50dp"-->
-                <!--android:background="#424242"-->
-                <!--android:textColor="#ffff"-->
-                <!--android:textStyle="italic"-->
-                <!--android:layout_weight="2"-->
-                <!--android:switchPadding="5sp"-->
-                <!--android:switchMinWidth="5sp"-->
-                <!--android:showText="true"/>-->
+            <!--android:id="@+id/but_raddeg_land"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:paddingLeft="50dp"-->
+            <!--android:background="#424242"-->
+            <!--android:textColor="#ffff"-->
+            <!--android:textStyle="italic"-->
+            <!--android:layout_weight="2"-->
+            <!--android:switchPadding="5sp"-->
+            <!--android:switchMinWidth="5sp"-->
+            <!--android:showText="true"/>-->
             <!--style="@android:style/Widget.Holo.Light.CompoundButton.Switch"-->
 
             <Button
-                android:id="@+id/but_facto_land"
+                android:id="@+id/but_factorial"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -71,7 +73,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_openparens_land"
+                android:id="@+id/but_openparens"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -80,7 +82,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_closeparens_land"
+                android:id="@+id/but_closeparens"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -89,7 +91,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_percent_land"
+                android:id="@+id/but_percent"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -98,7 +100,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_ac_land"
+                android:id="@+id/but_del"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -116,7 +118,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/but_inv_land"
+                android:id="@+id/but_inv"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -125,7 +127,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_sin_land"
+                android:id="@+id/but_sine"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -134,7 +136,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_ln_land"
+                android:id="@+id/but_ln"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -143,7 +145,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_7_land"
+                android:id="@id/but_7"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -152,7 +154,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_8_land"
+                android:id="@id/but_8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -161,7 +163,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_9_land"
+                android:id="@id/but_9"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -170,7 +172,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_div_land"
+                android:id="@id/but_div"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -188,7 +190,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/but_pi_land"
+                android:id="@+id/but_pi"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -197,7 +199,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_cos_land"
+                android:id="@+id/but_cos"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -206,7 +208,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_log_land"
+                android:id="@+id/but_log"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -215,7 +217,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_4_land"
+                android:id="@id/but_4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -224,7 +226,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_5_land"
+                android:id="@id/but_5"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -233,7 +235,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_6_land"
+                android:id="@id/but_6"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -242,7 +244,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_multi_land"
+                android:id="@id/but_multi"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -260,7 +262,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/but_e_land"
+                android:id="@+id/but_e"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -269,7 +271,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_tan_land"
+                android:id="@+id/but_tan"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -277,8 +279,9 @@
                 android:textColor="#ffff"
                 android:textStyle="italic"
                 android:layout_weight="1"/>
+
             <Button
-                android:id="@+id/but_radical_land"
+                android:id="@+id/but_sqrt"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -286,8 +289,9 @@
                 android:textColor="#ffff"
                 android:textStyle="italic"
                 android:layout_weight="1"/>
+
             <Button
-                android:id="@+id/but_1_land"
+                android:id="@id/but_1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -296,7 +300,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_2_land"
+                android:id="@id/but_2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -305,7 +309,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_3_land"
+                android:id="@id/but_3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -314,7 +318,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_subt_land"
+                android:id="@id/but_subt"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -332,7 +336,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/but_ans_land"
+                android:id="@+id/but_ans"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -341,7 +345,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_exp_land"
+                android:id="@+id/but_exp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -350,7 +354,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_pow_land"
+                android:id="@+id/but_pow"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
@@ -359,7 +363,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_0_land"
+                android:id="@id/but_0"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -368,7 +372,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_dot_land"
+                android:id="@id/but_dot"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -377,7 +381,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_equal_land"
+                android:id="@id/but_equal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#a6a6a6"
@@ -386,7 +390,7 @@
                 android:textStyle="italic"
                 android:layout_weight="1"/>
             <Button
-                android:id="@+id/but_add_land"
+                android:id="@id/but_add"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="#424242"
