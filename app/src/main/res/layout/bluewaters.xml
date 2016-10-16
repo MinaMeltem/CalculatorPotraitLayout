@@ -10,9 +10,11 @@
         android:id="@+id/text_result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:textSize="44sp"
-        android:background="@android:color/background_light"
-        android:layout_weight="2"/>
+        android:layout_weight="2"
+        android:paddingRight="15dp"
+        android:textSize="60sp"
+        android:gravity="center|end"
+        android:background="@android:color/background_light" />
 
     <LinearLayout
         android:orientation="horizontal"
