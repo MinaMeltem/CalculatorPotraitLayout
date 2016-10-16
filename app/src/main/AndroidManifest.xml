@@ -8,13 +8,28 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".splashactivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".cityView" />
+        <activity android:name=".headlessHoarseman" />
+        <activity android:name=".sunflowerfields" />
+        <activity android:name=".santasjourney" />
+        <activity android:name=".galaxy" />
+        <activity android:name=".lonelyroad" />
+        <activity android:name=".autumn" />
+        <activity android:name=".narnia" />
+        <activity android:name=".underwater" />
+        <activity android:name=".homeontherange" />
+        <activity android:name=".waterdrop" />
+        <activity android:name=".backgroundselector" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".Route66"/>
     </application>
 
 </manifest>

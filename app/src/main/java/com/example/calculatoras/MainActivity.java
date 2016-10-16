@@ -1,9 +1,12 @@
 package com.example.calculatoras;
 
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.content.res.Configuration;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,19 +16,25 @@ import org.mariuszgromada.math.mxparser.Expression;
 import java.text.DecimalFormat;
 import java.util.Random;
 
+
 public class MainActivity extends AppCompatActivity {
-    private Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, div, multi, add, subt, del, dot, equal, openP, closeP, sine, cos, tan, ln, log, sqrt, fact, exp, pow, percentage, pi, e, ans, inv;
+    private Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, div, multi, add, subt, del, dot,
+            equal, openP, closeP, sine, cos, ln, tan, log, sqrt, fact, exp, pow, percentage , pi,
+            e ,inv, ans, rad, deg;
+
     private TextView textView;
     private String operationInputs = "";
     private String lastAnswer = "";
     private boolean toggleOn = false;
-    double x;
+    private boolean isRadiant = true;
+    private boolean isDegree = false;
+    private double x;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.potrait_layout);
+        setContentView(R.layout.portrait_layout);
 
         // Display on Calculator
         textView = (TextView) findViewById(R.id.text_result);
@@ -64,8 +73,26 @@ public class MainActivity extends AppCompatActivity {
         e = (Button) findViewById(R.id.but_e);
         ans = (Button) findViewById(R.id.but_ans);
         inv = (Button) findViewById(R.id.but_inv);
+        deg = (Button) findViewById(R.id.but_deg);
+        rad = (Button) findViewById(R.id.but_rad);
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            deg.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view){
+                    isRadiant = false;
+                    isDegree = true;
+                }
+            });
+
+            rad.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view){
+                    isRadiant = true;
+                    isDegree = false;
+                }
+            });
+
             sine.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -76,6 +103,20 @@ public class MainActivity extends AppCompatActivity {
                         operationInputs += "sin(";
                         textView.setText(operationInputs);
                     }
+                }
+            });
+
+            sine.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(isRadiant) {
+                        operationInputs += "sin(";
+
+                    }else if (isDegree) {
+                        operationInputs +="sin(rad(";
+                    }
+
+                    textView.setText(operationInputs);
                 }
             });
 
@@ -92,6 +133,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+            cos.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(isRadiant) {
+                        operationInputs += "cos(rad(";
+
+                    }else if (isDegree) {
+                        operationInputs += "cos(";
+                    }
+
+
+                    textView.setText(operationInputs);
+                }
+            });
+
             tan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -102,6 +158,21 @@ public class MainActivity extends AppCompatActivity {
                         operationInputs += "tan(";
                         textView.setText(operationInputs);
                     }
+                }
+            });
+
+            tan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(isRadiant) {
+                        operationInputs += "tan(rad(";
+
+                    }else if (isDegree)
+                    {
+                        operationInputs += "tan(";
+                    }
+
+                    textView.setText(operationInputs);
                 }
             });
 
@@ -282,6 +353,7 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(operationInputs);
             }
         });
+
         multi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -421,6 +493,25 @@ public class MainActivity extends AppCompatActivity {
                 operationInputs = ""; // Commented out because it wasn't allowing user to continue operating on previous string
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;}
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.change_background:
+                Intent intent1 = new Intent(MainActivity.this, backgroundselector.class);
+                startActivity(intent1);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
