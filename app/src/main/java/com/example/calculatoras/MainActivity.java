@@ -7,13 +7,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.content.res.Configuration;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import org.mariuszgromada.math.mxparser.Expression;
+
+import java.text.DecimalFormat;
+import java.util.Random;
+
 
 public class MainActivity extends AppCompatActivity {
     private Button b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, div, multi, add, subt, del, dot,
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
     private String operationInputs = "";
+    private String lastAnswer = "";
     private boolean toggleOn = false;
     private boolean isRadiant = true;
     private boolean isDegree = false;
@@ -33,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.portrait_layout);
 
+        // Display on Calculator
         textView = (TextView) findViewById(R.id.text_result);
 
+        // Init buttons
         b0 = (Button) findViewById(R.id.but_0);
         b1 = (Button) findViewById(R.id.but_1);
         b2 = (Button) findViewById(R.id.but_2);
@@ -66,21 +71,16 @@ public class MainActivity extends AppCompatActivity {
         percentage = (Button) findViewById(R.id.but_percent);
         pi = (Button) findViewById(R.id.but_pi);
         e = (Button) findViewById(R.id.but_e);
-        inv = (Button) findViewById(R.id.but_inv);
         ans = (Button) findViewById(R.id.but_ans);
+        inv = (Button) findViewById(R.id.but_inv);
         deg = (Button) findViewById(R.id.but_deg);
         rad = (Button) findViewById(R.id.but_rad);
 
-
-
-
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-
-
             deg.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view){
-                    isRadiant =false;
+                    isRadiant = false;
                     isDegree = true;
                 }
             });
@@ -88,11 +88,23 @@ public class MainActivity extends AppCompatActivity {
             rad.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view){
-                    isRadiant =true;
-                    isDegree =false;
+                    isRadiant = true;
+                    isDegree = false;
                 }
+            });
 
-                });
+            sine.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (sine.getText().toString().equalsIgnoreCase("sin^-1")) {
+                        operationInputs += "arcsin(";
+                        textView.setText(operationInputs);
+                    } else {
+                        operationInputs += "sin(";
+                        textView.setText(operationInputs);
+                    }
+                }
+            });
 
             sine.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -101,10 +113,23 @@ public class MainActivity extends AppCompatActivity {
                         operationInputs += "sin(";
 
                     }else if (isDegree) {
-                      operationInputs +="sin(rad(";
+                        operationInputs +="sin(rad(";
                     }
 
                     textView.setText(operationInputs);
+                }
+            });
+
+            cos.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (cos.getText().toString().equalsIgnoreCase("cos^-1")) {
+                        operationInputs += "arccos(";
+                        textView.setText(operationInputs);
+                    } else {
+                        operationInputs += "cos(";
+                        textView.setText(operationInputs);
+                    }
                 }
             });
 
@@ -126,6 +151,19 @@ public class MainActivity extends AppCompatActivity {
             tan.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    if (tan.getText().toString().equalsIgnoreCase("tan^-1")) {
+                        operationInputs += "arctan(";
+                        textView.setText(operationInputs);
+                    } else {
+                        operationInputs += "tan(";
+                        textView.setText(operationInputs);
+                    }
+                }
+            });
+
+            tan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
                     if(isRadiant) {
                         operationInputs += "tan(rad(";
 
@@ -138,70 +176,80 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-
-
             ln.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    operationInputs += "ln(";
-                    textView.setText(operationInputs);
-
+                    if (ln.getText().toString().equalsIgnoreCase("e^x")) {
+                        operationInputs += "e^";
+                        textView.setText(operationInputs);
+                    } else {
+                        operationInputs += "ln(";
+                        textView.setText(operationInputs);
+                    }
                 }
             });
 
             log.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    operationInputs += "log10";
-                    textView.setText(operationInputs);
-
+                    if (log.getText().toString().equalsIgnoreCase("10^x")) {
+                        operationInputs += "10^";
+                        textView.setText(operationInputs);
+                    } else {
+                        operationInputs += "log10(";
+                        textView.setText(operationInputs);
+                    }
                 }
             });
 
             sqrt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    operationInputs += "sqrt( ";
-                    textView.setText(operationInputs);
-
+                    if (sqrt.getText().toString().equalsIgnoreCase("x^2")) {
+                        operationInputs += "^2";
+                        textView.setText(operationInputs);
+                    } else {
+                        operationInputs += "sqrt(";
+                        textView.setText(operationInputs);
+                    }
                 }
             });
 
             fact.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    del.setText("DEL");
                     operationInputs += "!";
                     textView.setText(operationInputs);
-
                 }
             });
 
             exp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    del.setText("DEL");
-                    operationInputs += "exp"; // find the syntax
-                    textView.setText(operationInputs);
-
+                    textView.setText(operationInputs + "E");
+                    operationInputs += "*10^";
                 }
             });
-
 
             pow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    operationInputs += "^"; // find the syntax
-                    textView.setText(operationInputs);
-
+                    if (pow.getText().toString().equalsIgnoreCase("y√x")) {
+                        operationInputs += "^(1/";
+                        textView.setText(operationInputs);
+                    } else {
+                        operationInputs += "^";
+                        textView.setText(operationInputs);
+                    }
                 }
             });
 
             percentage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    operationInputs += "%"; // find the syntax
-                    textView.setText(operationInputs);
-
+                    textView.setText(operationInputs + "%");
+                    operationInputs += "/100";
                 }
             });
 
@@ -210,57 +258,63 @@ public class MainActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     operationInputs += "pi";
                     textView.setText(operationInputs);
-
                 }
             });
 
             e.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    operationInputs += "e * ";
+                    operationInputs += "e";
                     textView.setText(operationInputs);
-
                 }
             });
-//
-//            ans.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    operationInputs += "%"; // find the syntax
-//                    textView.setText(operationInputs);
-//                    textView.setTextSize(44);
-//                }
-//            });
-//
-        inv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!toggleOn) {
-                    toggleOn = true;
-                } else if (toggleOn) {
-                    toggleOn = false;
+
+            ans.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (ans.getText().toString().equalsIgnoreCase("rnd")) {
+                        Random random = new Random();
+                        double randomNum = random.nextDouble();
+                        DecimalFormat df = new DecimalFormat("#.########");
+                        String formattedDouble = df.format(randomNum);
+                        operationInputs += formattedDouble;
+                        textView.setText(operationInputs);
+                    } else {
+                        textView.setText(operationInputs + "ANS");
+                        operationInputs += lastAnswer;
+                    }
                 }
-                if (toggleOn) {
-                    sine.setText("sin^-1");
-                    cos.setText("cos^-1");
-                    tan.setText("tan^-1");
-                    ln.setText("e^x");
-                    log.setText("10^x");
-                    sqrt.setText("x^2");
-                    ans.setText("Rnd");
-                    pow.setText("y√x");
-                } else {
-                    sine.setText("sin");
-                    cos.setText("cos");
-                    tan.setText("tan");
-                    ln.setText("ln");
-                    log.setText("log");
-                    sqrt.setText("√");
-                    ans.setText("Ans");
-                    pow.setText("x^y");
+            });
+
+            inv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (!toggleOn) {
+                        toggleOn = true;
+                    } else if (toggleOn) {
+                        toggleOn = false;
+                    }
+                    if (toggleOn) {
+                        sine.setText("sin^-1");
+                        cos.setText("cos^-1");
+                        tan.setText("tan^-1");
+                        ln.setText("e^x");
+                        log.setText("10^x");
+                        sqrt.setText("x^2");
+                        ans.setText("Rnd");
+                        pow.setText("y√x");
+                    } else {
+                        sine.setText("sin");
+                        cos.setText("cos");
+                        tan.setText("tan");
+                        ln.setText("ln");
+                        log.setText("log");
+                        sqrt.setText("√");
+                        ans.setText("Ans");
+                        pow.setText("x^y");
+                    }
                 }
-            }
-        });
+            });
 
             openP.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -277,10 +331,8 @@ public class MainActivity extends AppCompatActivity {
                     del.setText("DEL");
                     operationInputs += ")";
                     textView.setText(operationInputs);
-
                 }
             });
-
 
         }
 
@@ -301,13 +353,13 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(operationInputs);
             }
         });
+
         multi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 del.setText("DEL");
                 operationInputs += "*";
                 textView.setText(operationInputs);
-
             }
         });
 
@@ -317,7 +369,6 @@ public class MainActivity extends AppCompatActivity {
                 del.setText("DEL");
                 operationInputs += "/";
                 textView.setText(operationInputs);
-
             }
         });
 
@@ -326,13 +377,12 @@ public class MainActivity extends AppCompatActivity {
                 del.setText("DEL");
                 operationInputs += ".";
                 textView.setText(operationInputs);
-
             }
         });
 
         del.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                if (del.getText().toString().equals("AC")) {
+                if (del.getText().toString().equalsIgnoreCase("AC")) {
                     operationInputs = "";
                     textView.setText(operationInputs);
                 }
@@ -340,10 +390,8 @@ public class MainActivity extends AppCompatActivity {
                     operationInputs = operationInputs.substring(0, operationInputs.length() - 1);
                     textView.setText(operationInputs);
                 }
-
             }
         });
-
 
         b0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -351,7 +399,6 @@ public class MainActivity extends AppCompatActivity {
                 del.setText("DEL");
                 operationInputs += "0";
                 textView.setText(operationInputs);
-
             }
         });
 
@@ -363,46 +410,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         b2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 del.setText("DEL");
                 operationInputs += "2";
                 textView.setText(operationInputs);
-
             }
         });
-
 
         b3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 del.setText("DEL");
                 operationInputs += "3";
                 textView.setText(operationInputs);
-
             }
         });
-
 
         b4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 del.setText("DEL");
                 operationInputs += "4";
                 textView.setText(operationInputs);
-
             }
         });
-
 
         b5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 del.setText("DEL");
                 operationInputs += "5";
                 textView.setText(operationInputs);
-
             }
         });
-
 
         b6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -411,38 +449,36 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(operationInputs);
             }
         });
-//
 
         b7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 del.setText("DEL");
                 operationInputs += "7";
                 textView.setText(operationInputs);
-
             }
         });
 
         b8.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button_text));
                 operationInputs += "8";
                 textView.setText(operationInputs);
             }
         });
         b9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button_text));
                 operationInputs += "9";
                 textView.setText(operationInputs);
             }
         });
 
-
-
-
         equal.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 del.setText("AC");
+                if(operationInputs.equals("")) { // if the string is empty and the user presses "=", then have the calculator show 0
+                    operationInputs = "0";
+                }
                 Expression exp = new Expression(operationInputs);
                 x = exp.calculate();
 
@@ -452,17 +488,12 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     answer = "" + x; // if it's double number ( such as 3.45 ) then cast is to the string
                 }
-
                 textView.setText(answer);
-                operationInputs = "";
-
-
+                lastAnswer = answer;
+                operationInputs = ""; // Commented out because it wasn't allowing user to continue operating on previous string
             }
         });
-
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -477,14 +508,28 @@ public class MainActivity extends AppCompatActivity {
             case R.id.change_background:
                 Intent intent1 = new Intent(MainActivity.this, backgroundselector.class);
                 startActivity(intent1);
-            return true;
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putString("Last Answer", lastAnswer);
+        savedInstanceState.putString("Operation Inputs", operationInputs);
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        lastAnswer = savedInstanceState.getString("Last Answer");
+        operationInputs = savedInstanceState.getString("Operation Inputs");
+        textView.setText(operationInputs);
+        super.onRestoreInstanceState(savedInstanceState);
+    }
 }
-
-
-
-

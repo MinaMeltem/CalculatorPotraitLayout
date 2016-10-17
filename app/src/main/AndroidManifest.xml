@@ -29,7 +29,7 @@
         <activity android:name=".waterdrop" />
         <activity android:name=".backgroundselector" />
         <activity android:name=".Main2Activity" />
-        <activity android:name=".Route66"></activity>
+        <activity android:name=".Route66"/>
     </application>
 
 </manifest>
