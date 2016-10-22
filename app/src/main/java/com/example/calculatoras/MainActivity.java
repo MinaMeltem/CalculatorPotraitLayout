@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private String operationInputs = "";
     private String lastAnswer = "";
-    private boolean toggleOn = false;
+    private boolean inverseOperationsOn = false;
     private boolean isRadiant = true;
     private boolean isDegree = false;
     private double x;
@@ -76,20 +76,25 @@ public class MainActivity extends AppCompatActivity {
         deg = (Button) findViewById(R.id.but_deg);
         rad = (Button) findViewById(R.id.but_rad);
 
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+        // Set click listeners for landscape-only buttons
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) { // check if orientation == landscape
             deg.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view){
-                    isRadiant = false;
-                    isDegree = true;
+//                    isRadiant = false;
+//                    isDegree = true;
+                    operationInputs += "deg(";
+                    textView.setText(operationInputs);
                 }
             });
 
             rad.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view){
-                    isRadiant = true;
-                    isDegree = false;
+//                    isRadiant = true;
+//                    isDegree = false;
+                    operationInputs += "rad(";
+                    textView.setText(operationInputs);
                 }
             });
 
@@ -106,19 +111,19 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            sine.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(isRadiant) {
-                        operationInputs += "sin(";
-
-                    }else if (isDegree) {
-                        operationInputs +="sin(rad(";
-                    }
-
-                    textView.setText(operationInputs);
-                }
-            });
+//            sine.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    if(isRadiant) {
+//                        operationInputs += "sin(";
+//
+//                    }else if (isDegree) {
+//                        operationInputs +="sin(rad(";
+//                    }
+//
+//                    textView.setText(operationInputs);
+//                }
+//            });
 
             cos.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -133,20 +138,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            cos.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(isRadiant) {
-                        operationInputs += "cos(rad(";
-
-                    }else if (isDegree) {
-                        operationInputs += "cos(";
-                    }
-
-
-                    textView.setText(operationInputs);
-                }
-            });
+//            cos.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    if(isRadiant) {
+//                        operationInputs += "cos(rad(";
+//
+//                    }else if (isDegree) {
+//                        operationInputs += "cos(";
+//                    }
+//
+//
+//                    textView.setText(operationInputs);
+//                }
+//            });
 
             tan.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -161,20 +166,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            tan.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(isRadiant) {
-                        operationInputs += "tan(rad(";
-
-                    }else if (isDegree)
-                    {
-                        operationInputs += "tan(";
-                    }
-
-                    textView.setText(operationInputs);
-                }
-            });
+//            tan.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    if(isRadiant) {
+//                        operationInputs += "tan(rad(";
+//
+//                    }else if (isDegree)
+//                    {
+//                        operationInputs += "tan(";
+//                    }
+//
+//                    textView.setText(operationInputs);
+//                }
+//            });
 
             ln.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -273,10 +278,10 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (ans.getText().toString().equalsIgnoreCase("rnd")) {
-                        Random random = new Random();
-                        double randomNum = random.nextDouble();
-                        DecimalFormat df = new DecimalFormat("#.########");
-                        String formattedDouble = df.format(randomNum);
+                        Random random = new Random(); // instantiate new random number
+                        double randomNum = random.nextDouble(); // set randomNum to a random double
+                        DecimalFormat df = new DecimalFormat("#.########"); // instantiate decimal formatter
+                        String formattedDouble = df.format(randomNum); // formattedDouble = formatted randomNum (e.g., 0.62347129)
                         operationInputs += formattedDouble;
                         textView.setText(operationInputs);
                     } else {
@@ -289,12 +294,15 @@ public class MainActivity extends AppCompatActivity {
             inv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (!toggleOn) {
-                        toggleOn = true;
-                    } else if (toggleOn) {
-                        toggleOn = false;
+                    // toggle Inverse Operations On/Off
+                    if (!inverseOperationsOn) {
+                        inverseOperationsOn = true;
+                    } else if (inverseOperationsOn) {
+                        inverseOperationsOn = false;
                     }
-                    if (toggleOn) {
+
+                    // if Inverse Operations are on, set text as the following:
+                    if (inverseOperationsOn) {
                         sine.setText("sin^-1");
                         cos.setText("cos^-1");
                         tan.setText("tan^-1");
@@ -303,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
                         sqrt.setText("x^2");
                         ans.setText("Rnd");
                         pow.setText("y√x");
-                    } else {
+                    } else { // if Inverse Operations are off, set text as the following:
                         sine.setText("sin");
                         cos.setText("cos");
                         tan.setText("tan");
