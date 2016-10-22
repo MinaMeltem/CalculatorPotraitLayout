@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
             fact.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    del.setText("DEL");
+                    del.setText(getResources().getString(R.string.del_button));
                     operationInputs += "!";
                     textView.setText(operationInputs);
                 }
@@ -319,7 +319,7 @@ public class MainActivity extends AppCompatActivity {
             openP.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    del.setText("DEL");
+                    del.setText(getResources().getString(R.string.del_button));
                     operationInputs += "(";
                     textView.setText(operationInputs);
                 }
@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
             closeP.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    del.setText("DEL");
+                    del.setText(getResources().getString(R.string.del_button));
                     operationInputs += ")";
                     textView.setText(operationInputs);
                 }
@@ -339,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "+";
                 textView.setText(operationInputs);
             }
@@ -348,7 +348,7 @@ public class MainActivity extends AppCompatActivity {
         subt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "-";
                 textView.setText(operationInputs);
             }
@@ -357,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
         multi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "*";
                 textView.setText(operationInputs);
             }
@@ -366,7 +366,7 @@ public class MainActivity extends AppCompatActivity {
         div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "/";
                 textView.setText(operationInputs);
             }
@@ -374,7 +374,7 @@ public class MainActivity extends AppCompatActivity {
 
         dot.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += ".";
                 textView.setText(operationInputs);
             }
@@ -396,7 +396,7 @@ public class MainActivity extends AppCompatActivity {
         b0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "0";
                 textView.setText(operationInputs);
             }
@@ -404,7 +404,7 @@ public class MainActivity extends AppCompatActivity {
 
         b1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "1";
                 textView.setText(operationInputs);
             }
@@ -412,7 +412,7 @@ public class MainActivity extends AppCompatActivity {
 
         b2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "2";
                 textView.setText(operationInputs);
             }
@@ -420,7 +420,7 @@ public class MainActivity extends AppCompatActivity {
 
         b3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "3";
                 textView.setText(operationInputs);
             }
@@ -428,7 +428,7 @@ public class MainActivity extends AppCompatActivity {
 
         b4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "4";
                 textView.setText(operationInputs);
             }
@@ -436,7 +436,7 @@ public class MainActivity extends AppCompatActivity {
 
         b5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "5";
                 textView.setText(operationInputs);
             }
@@ -444,7 +444,7 @@ public class MainActivity extends AppCompatActivity {
 
         b6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "6";
                 textView.setText(operationInputs);
             }
@@ -452,7 +452,7 @@ public class MainActivity extends AppCompatActivity {
 
         b7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText("DEL");
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "7";
                 textView.setText(operationInputs);
             }
@@ -460,14 +460,14 @@ public class MainActivity extends AppCompatActivity {
 
         b8.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText(getResources().getString(R.string.del_button_text));
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "8";
                 textView.setText(operationInputs);
             }
         });
         b9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                del.setText(getResources().getString(R.string.del_button_text));
+                del.setText(getResources().getString(R.string.del_button));
                 operationInputs += "9";
                 textView.setText(operationInputs);
             }
