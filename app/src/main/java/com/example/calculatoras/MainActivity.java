@@ -516,20 +516,30 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
-        // Save the user's current game state
+        // Grab current text from TextView
+        String currentText = textView.getText().toString();
+
+        // Save the user's current state and member information of the calculator
         savedInstanceState.putString("Last Answer", lastAnswer);
         savedInstanceState.putString("Operation Inputs", operationInputs);
+        savedInstanceState.putString("Current Text", currentText);
 
-        // Always call the superclass so it can save the view hierarchy state
+        // Always call the superclass so it can save the view hierarchy state (the state of the structure of the views/view groups in your app)
         super.onSaveInstanceState(savedInstanceState);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy (the structure of the views/view groups in your app)
+        super.onRestoreInstanceState(savedInstanceState);
 
+        // Restore state and member information from saved instance
+        String currentText = savedInstanceState.getString("Current Text");
         lastAnswer = savedInstanceState.getString("Last Answer");
         operationInputs = savedInstanceState.getString("Operation Inputs");
-        textView.setText(operationInputs);
-        super.onRestoreInstanceState(savedInstanceState);
+
+        // Set textView's text using the String
+        textView.setText(currentText);
+
     }
 }
